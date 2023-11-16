@@ -1,0 +1,23 @@
+.btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #8C4F2B;
+    background-color: #CBC1B8;
+    cursor: pointer;
+  }
+
+.btn:hover {
+  background-color: #8C4F2B;
+  color: #CBC1B8;
+}
+
+@media (min-width: 910px){
+  .btn{
+    width: 375px;
+    height: 50px;
+  }
+  
+}
