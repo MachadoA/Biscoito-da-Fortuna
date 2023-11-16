@@ -20,15 +20,16 @@
     color: #BFA18F;
     text-align: center;
     margin: 0;
+    font-family: 'Glass Antiqua';
   }
   
   .textPhrase{
-    font-size: 20px;
+    font-size: 22px;
     padding: 15px 0;
+    font-style: italic;
   }
   .textAuthor{
     font-size: 16px;
-    font-style: italic;
   }
 
   .btnDisplay{
@@ -52,5 +53,6 @@
   .textAuthor {
     max-width: 900px;
     width: 85%;
+    
   }
 }
