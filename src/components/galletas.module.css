@@ -14,7 +14,7 @@
     height: auto;
     border-radius: 12px;
   }
-  .imgDesktop{display: none;}
+  .imgDesktop{display: none; border-radius: 12px;}
   
   .textPhrase,
   .textAuthor {
