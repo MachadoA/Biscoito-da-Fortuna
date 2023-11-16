@@ -8,12 +8,13 @@
     width: 100%;
     margin: auto;
   }
-  img{
+  .imgMobile{
     max-width: 350px;
     width: 100%;
     height: auto;
     border-radius: 12px;
   }
+  .imgDesktop{display: none;}
   
   .textPhrase,
   .textAuthor {
@@ -44,10 +45,11 @@
     width: 100%;
     height: 100vh;
   }
-  img{
-    max-width: 900px;
-    width: 85%;
-    height: 70%;
+  .imgMobile{
+    display: none;
+  }
+  .imgDesktop{
+    display: block;
   }
   .textPhrase,
   .textAuthor {

@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import styles from './galletas.module.css';
-import fechado from '.././img/cookie_with_coffe.jpg';
-import aberto from '.././img/open_with_coffe.jpg';
+import fechado from '.././img/cookie_with_coffe_mobile.jpg';
+import closed from '.././img/cookie_with_coffe_desktop.jpg';
+import aberto from '.././img/open_with_coffe_mobile.jpg';
+import open from '.././img/open_with_coffe_desktop.jpg';
 import Button from './Button';
 import axios from 'axios';
 
 
 export default function Galletas() {
   const [img, setImg] = useState(fechado);
+  const [imgDesktop, setImgDesktop] = useState(closed);
   const [isVisible, setIsVisible] = useState(false);
   const [phrases, setPhrases] = useState([]);
   const [currentId, setCurrentId] = useState(0);
@@ -34,7 +37,9 @@ export default function Galletas() {
 
   const restart = () => {
     const imgOriginal = fechado;
+    const imgMain = closed;
     setImg(imgOriginal);
+    setImgDesktop(imgMain)
     setIsVisible(false);
   };
 
@@ -42,15 +47,18 @@ export default function Galletas() {
   const breakCookie = () => {
     const newId = Math.floor(Math.random() * phrases.length);
     setCurrentId(newId);
-    const secondImg = aberto;
-    setImg(secondImg);
+    const imgSegunda = aberto;
+    const secondImg = open;
+    setImg(imgSegunda);
+    setImgDesktop(secondImg)
     setIsVisible(true);
   };
 
   return (
     <>
       <section className={styles.container}>
-        <img src={img} alt="Biscoito" className={styles.img} />
+        <img src={img} alt="Biscoito" className={styles.imgMobile} />
+        <img src={imgDesktop} alt="Biscoito" className={styles.imgDesktop} />
         <h1 className={styles.textPhrase} style={{ visibility: isVisible ? 'visible' : 'hidden' }}>{phrases[currentId] && phrases[currentId].phrase}</h1>
         <p className={styles.textAuthor} style={{ visibility: isVisible ? 'visible' : 'hidden' }}>Autor: {phrases[currentId] && phrases[currentId].author}</p>
         <div className={styles.btnDisplay}>
