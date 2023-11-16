@@ -15,7 +15,10 @@ export default function Galletas() {
   useEffect(() => {
     const searchSentences = async () => {
       try {
-        const response = await axios.get('https://biscoito-sabedoria.netlify.app/data/phrases.json');
+        // const response = await axios.get('https://biscoito-sabedoria.netlify.app/data/phrases.json');
+        const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
+        const response = await axios.get(`${baseUrl}/data/phrases.json`);
+        
         const sentences = response.data;
 
         if (sentences.phrases && sentences.phrases.length > 0) {

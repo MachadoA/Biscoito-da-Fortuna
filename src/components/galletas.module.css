@@ -48,4 +48,9 @@
     width: 85%;
     height: 70%;
   }
+  .textPhrase,
+  .textAuthor {
+    max-width: 900px;
+    width: 85%;
+  }
 }
