@@ -50,10 +50,11 @@
   }
   .imgDesktop{
     display: block;
+    height: 350px;
   }
   .textPhrase,
   .textAuthor {
-    max-width: 900px;
+    max-width: 707px;
     width: 85%;
     
   }
